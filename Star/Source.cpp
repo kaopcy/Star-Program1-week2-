@@ -1,21 +1,18 @@
 #include<stdio.h>
 int main()
 {
-	float x, y;
-	printf("Enter Fahrenheit : ");
-	scanf_s("%f", &x);
-	y = (x - 32) * 5 / 9;
-
-	if (y <= 0)
+	int x, i = 0;
+	printf("Enter row of star : ");
+	scanf_s("%d", &x);
+	while (i < x)
 	{
-		printf("Celsius is %.3f \nit too cold to live", y);
-	}
-	else if (y > 0 && y < 50)
-	{
-		printf("Celsius is %.3f \nHuman can live in this temperature", y);
-	}
-	else
-	{
-		printf("Celsius is %.3f \nit too hot to live", y);
+		int j = 0;
+		while (j <= i)
+		{
+			printf("* ");
+			j++;
+		}
+		printf("\n");
+		i++;
 	}
 }
